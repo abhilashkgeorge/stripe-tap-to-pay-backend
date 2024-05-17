@@ -1,0 +1,11 @@
+node_modules
+build
+npm-debug.log
+.nyc
+.env
+.DS_Store
+coverage
+*.log
+credentials.json
+dabba-waitlist-spread-sheet.json
+google-spread-sheet-keys.json
