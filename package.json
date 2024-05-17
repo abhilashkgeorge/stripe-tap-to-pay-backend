@@ -4,8 +4,10 @@
   "description": "Stripe Backend for the iOS Dabba pay app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "nodemon index.js",  
+    "pm2:start": "pm2 start index.js --name stripe-backend",  
+    "pm2:kill": "pm2 kill" 
+    },
   "author": "",
   "license": "ISC",
   "dependencies": {
