@@ -140,6 +140,7 @@ app.post('/gdata', async (req,res) =>{
     const email = req.body.email;
     const status = req.body.status;
     const price = req.body.price;
+    const quantity = req.body.count;
    
     const sheetId = process.env.DABBA_SALES_GOOGLE_SHEET_ID;
     const tabName = "knox";
@@ -154,6 +155,8 @@ app.post('/gdata', async (req,res) =>{
       email,
       price, 
       status,
+      quantity,
+      new Date().toLocaleString()
     ]);
     
     await gsheetHelper._writeGoogleSheet(googleSheetClient, sheetId, tabName, range, dataToInsert);
