@@ -156,7 +156,7 @@ app.post('/gdata', async (req,res) =>{
       price, 
       status,
       quantity,
-      new Date().getTime()
+      new Date().toLocaleString
     ]);
     
     await gsheetHelper._writeGoogleSheet(googleSheetClient, sheetId, tabName, range, dataToInsert);
